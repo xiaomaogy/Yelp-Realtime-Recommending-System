@@ -1,0 +1,5 @@
+./kafka-topics.sh --create --zookeeper hadoop-w-1.c.mpcs53013-2015.internal:2181 --replication-factor 1 --partitions 1 --topic yuan_yelp_reviews
+
+./kafka-console-producer.sh --broker-list hadoop-m.c.mpcs53013-2015.internal:6667 --topic yuan_yelp_reviews
+
+./kafka-console-consumer.sh --zookeeper hadoop-w-1.c.mpcs53013-2015.internal:2181 --topic yuan_yelp_reviews --from-beginning
